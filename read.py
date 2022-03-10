@@ -1,7 +1,7 @@
 import cv2 as cv
 
-img = cv.imread("Resources/Photos/cat.jpg")
+img = cv.imread("Resources/Photos/cat_large.jpg")
 
-cv.imshow('Car', img)
+cv.imshow('Cat', img)
 
-cv.waitKey(0) # wait infinite amount of time for click (0)
+cv.waitKey(0)   # wait infinite amount of time for click (0)
