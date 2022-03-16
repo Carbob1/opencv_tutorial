@@ -22,4 +22,18 @@ cv.imshow("Canny Edge", canny)
 dilated = cv.dilate(canny, (7, 7), iterations=3)
 cv.imshow("Dilated", dilated)
 
+# Eroding
+eroded = cv.erode(dilated, (3, 3), iterations=3)
+cv.imshow("Eroded", eroded)
+
+# Resize    (ignores aspect ratio - for ex 16:9 (width to height))
+resize = cv.resize(img, (500, 500), interpolation=cv.INTER_AREA)  # INTER_AREA (or default) useful for shrinking
+# INTER_LINEAR or INTER_CUBIC for enlarging images, CUBIC is the slower but gives better quality
+cv.imshow("Resized", resize)
+
+# Cropping (images are arrays, so we can crop them like arrays)
+cropped = img[200:300, 300:500]
+cv.imshow("Cropped", cropped)
+
 cv.waitKey(0)
+
