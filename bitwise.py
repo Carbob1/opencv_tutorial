@@ -19,4 +19,12 @@ cv.imshow("AND", bitwise_and)
 bitwise_or = cv.bitwise_or(rectangle, circle)
 cv.imshow("OR", bitwise_or)
 
+# bitwise XOR (sum minus intersection)
+bitwise_xor = cv.bitwise_xor(rectangle, circle)
+cv.imshow("XOR", bitwise_xor)
+
+# bitwise NOT (1/image)
+bitwise_not = cv.bitwise_not(circle)
+cv.imshow("NOT", bitwise_not)
+
 cv.waitKey(0)
